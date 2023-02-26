@@ -1,0 +1,142 @@
+:root{
+ /* Primary */
+--Pale-blue: hsl(225, 100%, 94%);
+--Bright-blue: hsl(245, 75%, 52%);
+
+/* Neutral */
+--Very-pale-blue: hsl(225, 100%, 98%);
+--Desaturated-blue: hsl(224, 23%, 55%);
+--Dark-blue: hsl(223, 47%, 23%);
+}
+
+
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  background: url(images/pattern-background-mobile.svg),var(--Pale-blue);
+    background-repeat: no-repeat;
+  background-size: contain;
+  display: grid;
+  place-items: center;
+ min-height: 100vh;
+ font-family: 'Red Hat Display', sans-serif;
+}
+@media (min-width:650px) {
+ body{
+  background: url(images/pattern-background-desktop.svg);
+     background-repeat: no-repeat;
+    background-size: contain;
+ }
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+.picture-back img{
+ width: 100%;
+}
+
+.summary{
+
+border-radius: 12px;
+overflow: hidden;
+
+background-color: var(--Very-pale-blue);
+}
+.picture img{
+ width: 100%;
+}
+.summary-order-aside{
+ display: grid;
+ gap: 1rem;
+ padding: 1.5rem;
+text-align: center;
+}
+.summary-order__title{
+ font-weight: 900;
+ font-size: 1.8rem;
+}
+.summary-order__text{
+ font-weight: 500;
+width: 60%;
+font-size: 1.2rem;
+opacity: .8;
+}
+
+.annual-plan{
+ background-color: var(--Pale-blue);
+ padding-block: .2rem;
+ display: flex;
+ align-items: center;
+ justify-content: space-evenly;
+ margin: 1.5rem;
+}
+.annual-plan__list-order h3{
+ color: var(--Dark-blue);
+}
+.annual-plan__list-order span{
+ color: var(--Bright-blue);
+}
+.summary-order{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.Payment{
+display: grid;
+gap: 1rem;
+place-content: center;
+text-align: center;
+}
+.button{
+padding: .6rem 12rem;
+background-color: var(--Bright-blue);
+border: 0;
+border-radius: 6px;
+color: var(--Very-pale-blue);
+}
+.button:is(:hover,:focus){
+background-color: var(--Dark-blue);
+}
+.button+p >a{
+ text-decoration: none;
+}
