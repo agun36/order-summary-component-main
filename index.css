@@ -35,21 +35,25 @@ html, body {
   5. Improve text rendering
 */
 body {
+  padding: 2rem;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   background: url(images/pattern-background-mobile.svg),var(--Pale-blue);
     background-repeat: no-repeat;
   background-size: contain;
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   place-items: center;
- min-height: 100vh;
+ height: 100vh;
  font-family: 'Red Hat Display', sans-serif;
 }
 @media (min-width:650px) {
  body{
   background: url(images/pattern-background-desktop.svg);
      background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    grid-template-rows: 1fr;
  }
 }
 /*
@@ -128,7 +132,7 @@ place-content: center;
 text-align: center;
 }
 .button{
-padding: .6rem 12rem;
+padding: .6rem 3rem;
 background-color: var(--Bright-blue);
 border: 0;
 border-radius: 6px;
